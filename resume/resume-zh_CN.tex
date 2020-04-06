@@ -1,0 +1,87 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{康宗}
+
+\basicInfo{
+  {(+86) 151-1632-6640} \textperiodcentered\ 
+  {kangzong@stu.xjtu.edu.cn} \textperiodcentered\ 
+  {https://github.com/JessonKang}}
+
+\section{求职意向}
+\begin{itemize}
+  \item \textbf{本人情况} \quad 西安交通大学软件工程专业研二在读
+  \item \textbf{意向岗位} \quad 后台开发工程师
+  \item \textbf{入职时间} \quad 2020年7月可入职，可实习时间为2个月及以上
+\end{itemize}
+
+
+\section{\  教育背景}
+\datedsubsection{\textbf{西安交通大学} \quad 陕西西安}{2018.09 -- 至今}
+\textit{硕士}\qquad 软件工程
+\datedsubsection{\textbf{湖南涉外经济学院} \quad 湖南长沙}{2014.09 -- 2018.06}
+\textit{本科}\quad 计算机科学与技术
+
+\section{\ 获奖经历/证书}
+\datedsubsection{{西安交通大学一等奖学金}}{2019.10}
+\datedsubsection{{西安交通大学二等奖学金}}{2018.10}
+\datedsubsection{{国家励志奖学金}}{2016.10}
+\datedsubsection{{国家励志奖学金}}{2015.10}
+{英语证书 \qquad\qquad CET-6}
+
+\section{专业技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.2ex]
+  \item \textbf{编程语言} \qquad 了解Java语言基础，了解一点C/C++和python语法
+  \item \textbf{算法} \qquad\qquad 了解常用的数据结构和算法
+  \item \textbf{操作系统} \qquad 了解操作系统原理，懂一些Linux的基本操作
+  \item \textbf{网络} \qquad\qquad 了解TCP/UDP传输协议，以及http/https协议
+    \item \textbf{数据库} \qquad\quad 了解数据库原理，懂一些MySQL、Redis原理
+  
+\end{itemize}
+
+\section{\ 项目经历}
+\datedsubsection{\textbf{接口鉴权系统}{\quad 个人项目}}{https://github.com/JessonKang/interface-authentication}
+\qquad 该系统可以实现所有对调用服务端接口的请求进行鉴权，且只有被鉴权成功的请求才能成功调用到接口。该系统可以避免服务端被重放攻击，保证接口被调用时服务端的安全性。
+\begin{itemize}
+  \item 客户端将调用请求所涉及的URL和AppID、密码、时间戳拼接在一起，使用SHA-256算法加密生成一个token，将token及AppID随URL传至服务端；
+  \item 服务端接收到请求后，根据AppID从数据库中取出密码，再结合相关信息用同样的加密算法生成新token，如果两个token相同则鉴权成功，反之鉴权失败；
+  \item 生成token时加入时间戳（随机变量）这个参数可以优化token生成算法，防止产生哈希冲突，同时在服务端也可以借助时间戳设置失效时间窗口（如1分钟），因此提高了系统的性能和安全性。
+\end{itemize}
+
+\section{\ 学生工作/自我评价}
+\datedsubsection{\textbf{班级团支书}}{2014.10-2018.06}
+\begin{itemize}
+    \item 负责组织和管理班级相关的工作
+\end{itemize}
+\textbf{自我评价}
+\begin{itemize}
+    \item 人生态度积极乐观、性格平和，沟通能力强，擅长团队合作
+    \item 乐于钻研，喜欢挑战新事物
+    \item 喜欢徒步、骑行等户外运动
+\end{itemize}
+
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
