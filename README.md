@@ -13,6 +13,6 @@
 
 ## 简历
 
-&emsp;使用latex制作简历，本模板的使用方法是先将resume文件夹压缩成zip文件，然后上传到[overleaf](https://www.overleaf.com/)中在线编辑latex即可，下面是我的简历效果。
+&emsp;使用latex制作简历，本模板的使用方法是先将resume文件夹压缩成zip文件，然后上传到[overleaf](https://www.overleaf.com/)中在线编辑latex即可，下面是我的简历效果（其中的水印是用WPS将pdf转图片时软件加的，latex生成的不会有水印）。
 
 ![](resume/resume_kz.png)
